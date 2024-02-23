@@ -11,7 +11,7 @@ export const env = createEnv({
       .string()
       .url()
       .refine(
-        (str) => !str.includes("postgresql://postgres:abir@localhost:5432/collaborative-learning-sm"),
+        (str) => !str.includes("DATABASE_URL"),
         "You forgot to change the default URL"
       ),
     NODE_ENV: z
